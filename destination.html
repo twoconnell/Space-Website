@@ -17,7 +17,11 @@
 
     <title>Space Tourism || Destination</title>
 
-    <script src="./index.js" defer></script>
+    <!-- General/mobile menu script -->
+    <script src="./resources/javascript/index.js" defer></script> 
+
+    <!-- Destination specific script -->
+    <script src="./resources/javascript/destination.js" defer></script>
   </head>
 
   <body class="destination">
@@ -81,26 +85,30 @@
 
       <div class="tab-list underline-indicators flex">
         <button
+          id="moon-button"
           aria-selected="true"
-          class="moon-button uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Moon
         </button>
         <button
+          id="mars-button"
           aria-selected="false"
-          class="mars-button uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Mars
         </button>
         <button
+          id="europa-button"
           aria-selected="false"
-          class="europa-button uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Europa
         </button>
         <button
+          id="titan-button"
           aria-selected="false"
-          class="titan-button uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Titan
         </button>
