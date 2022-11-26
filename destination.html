@@ -20,8 +20,8 @@
     <!-- General/mobile menu script -->
     <script src="./resources/javascript/index.js" defer></script> 
 
-    <!-- Destination specific script -->
-    <script type="module" src="./resources/javascript/destination.js" defer></script>
+    <!-- tab script -->
+    <script type="module" src="./resources/javascript/tab-system.js" defer></script>
   </head>
 
   <body class="destination">
@@ -81,43 +81,42 @@
         <span aria-hidden="true">01</span>Pick your destination
       </h1>
 
-      <img class="planet-image" src="./assets/destination/image-moon.png" alt="the moon" />
+      <picture>
+        <source class="image-webp" srcset="./assets/destination/image-moon.webp">
+        <img class="image-png" src="./assets/destination/image-moon.png" alt="the moon" />
+      </picture>
 
       <div class="tab-list underline-indicators flex">
         <button
-          id="moon-button"
           aria-selected="true"
-          class="uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="planet-button uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Moon
         </button>
         <button
-          id="mars-button"
           aria-selected="false"
-          class="uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="planet-button uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Mars
         </button>
         <button
-          id="europa-button"
           aria-selected="false"
-          class="uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="planet-button uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Europa
         </button>
         <button
-          id="titan-button"
           aria-selected="false"
-          class="uppercase ff-sans-cond text-accent lett-spacing-2"
+          class="planet-button uppercase ff-sans-cond text-accent lett-spacing-2"
         >
           Titan
         </button>
       </div>
 
       <article class="destination-info flow">
-        <h2 class="destination-info-title fs-800 ff-serif uppercase">Moon</h2>
+        <h2 class="title fs-800 ff-serif uppercase">Moon</h2>
 
-        <p class="destination-info-about">
+        <p class="about">
           See our planet as you’ve never seen it before. A perfect relaxing trip
           away to help regain perspective and come back refreshed. While you’re
           there, take in some history by visiting the Luna 2 and Apollo 11
@@ -126,11 +125,11 @@
         <div class="destination-meta flex">
           <div>
             <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
-            <p class="destination-info-distance ff-serif uppercase">384,400 km</p>
+            <p class="distance ff-serif uppercase">384,400 km</p>
           </div>
           <div>
             <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
-            <p class="destination-info-time ff-serif uppercase">3 days</p>
+            <p class="time ff-serif uppercase">3 days</p>
           </div>
         </div>
       </article>
