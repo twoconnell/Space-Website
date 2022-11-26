@@ -3,10 +3,13 @@ import jsonData from "../data.json" assert { type: "json" };
 // buttons
 const planetButtons = document.querySelectorAll(".planet-button");
 const crewButtons = document.querySelectorAll(".crew-button");
+const techButtons = document.querySelectorAll(".tech-buttons");
 
 // assets
 const imageWebp = document.querySelector(".image-webp");
 const imagePng = document.querySelector(".image-png");
+// const imagePort = 
+// const imageLand =
 const title = document.querySelector(".title");
 const name = document.querySelector(".name");
 const about = document.querySelector(".about");
@@ -53,6 +56,11 @@ const contentFunction = (item, array) => {
     about.innerHTML = jsonData.destinations[number].description;
     distance.innerHTML = jsonData.destinations[number].distance;
     time.innerHTML = jsonData.destinations[number].travel;
+  } else if (document.querySelector(".technology")) {
+    // imagePort.
+    // imageLand.
+    title.innerHTML = jsonData.technology[number].name;
+    about.innerHTML = jsonData.technology[number].description;
   }
 };
 
@@ -70,4 +78,11 @@ if (document.querySelector(".crew")) {
       contentFunction(item, planetButtons);
     });
   });
+} else if (document.querySelector('.technology')) {
+  techButtons.forEach((item) => {
+    item.addEventListener("click", () => {
+      buttonActiveFunction(item, techButtons);
+      contentFunction(item, techButtons);
+    })
+  })
 }

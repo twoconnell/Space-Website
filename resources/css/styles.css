@@ -470,12 +470,19 @@ select {
   background-color: hsl(var(--clr-white) / 1);
 }
 
+.number-indicators {
+  grid-auto-flow: column;
+}
+
 .number-indicators > * {
+  position: relative;
+  display: inline-grid;
   cursor: pointer;
   border: 2px solid hsl(var(--clr-white) / 0.25);
   border-radius: 50%;
   aspect-ratio: 1;
-  padding: 0.5em;
+  place-items: center;
+  padding: 0 2em;
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-white));
 }
