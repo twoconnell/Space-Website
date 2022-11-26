@@ -2,6 +2,8 @@
 // destination functions
 // --------------------------------------------
 
+import jsonData from '../data.json' assert {type: 'json'};
+
 // buttons
 const commanderButton = document.getElementById("commander-button");
 const specialistButton = document.getElementById("specialist-button");
@@ -28,53 +30,33 @@ const buttonActiveFunction = (selectedButton) => {
 };
 
 // set assets function
-const crewFunction = (image, title, name, about) => {
-  crewImage.setAttribute("src", image);
-  crewTitle.innerHTML = title;
-  crewName.innerHTML = name;
-  crewAbout.innerHTML = about;
+const crewFunction = (crewNumber) => {
+  crewImage.setAttribute("src", jsonData.crew[crewNumber].images.png);
+  crewTitle.innerHTML = jsonData.crew[crewNumber].role;
+  crewName.innerHTML = jsonData.crew[crewNumber].name;
+  crewAbout.innerHTML = jsonData.crew[crewNumber].bio;
 };
 
 // commander
 commanderButton.addEventListener('click', () => {
   buttonActiveFunction(commanderButton);
-  crewFunction(
-    './assets/crew/image-douglas-hurley.png',
-    'Commander',
-    'Douglas Hurley',
-    'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.'
-    );
+  crewFunction(0);
 })
 
 // specialist
 specialistButton.addEventListener('click', () => {
   buttonActiveFunction(specialistButton);
-  crewFunction(
-    './assets/crew/image-mark-shuttleworth.png',
-    'Mission Specialist',
-    'MARK SHUTTLEWORTH',
-    'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.'
-    );
+  crewFunction(1);
 })
 
 // pilot
 pilotButton.addEventListener('click', () => {
   buttonActiveFunction(pilotButton);
-  crewFunction(
-    './assets/crew/image-victor-glover.png',
-    'Pilot',
-    'Victor Glover',
-    'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.'
-    );
+  crewFunction(2);
 })
 
 // engineer
 engineerButton.addEventListener('click', () => {
   buttonActiveFunction(engineerButton);
-  crewFunction(
-    './assets/crew/image-anousheh-ansari.png',
-    'Pilot',
-    'Anousheh Ansari',
-    'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.'
-    );
+  crewFunction(3);
 })
