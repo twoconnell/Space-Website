@@ -8,8 +8,8 @@ const techButtons = document.querySelectorAll(".tech-buttons");
 // assets
 const imageWebp = document.querySelector(".image-webp");
 const imagePng = document.querySelector(".image-png");
-// const imagePort = 
-// const imageLand =
+const imageLand = document.querySelector(".image-land");
+const imagePort = document.querySelector(".image-port");
 const title = document.querySelector(".title");
 const name = document.querySelector(".name");
 const about = document.querySelector(".about");
@@ -57,9 +57,9 @@ const contentFunction = (item, array) => {
     distance.innerHTML = jsonData.destinations[number].distance;
     time.innerHTML = jsonData.destinations[number].travel;
   } else if (document.querySelector(".technology")) {
-    // imagePort.
-    // imageLand.
-    title.innerHTML = jsonData.technology[number].name;
+    imageLand.setAttribute("src", jsonData.technology[number].images.landscape);
+    imagePort.setAttribute("srcset", jsonData.technology[number].images.portrait);
+    name.innerHTML = jsonData.technology[number].name;
     about.innerHTML = jsonData.technology[number].description;
   }
 };
